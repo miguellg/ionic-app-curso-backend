@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/server.js",
   "license": "MIT",
-  "autor": "Miguel L. Garcia <miguelg_sl@hotmail.com>",
+  "autor": "Miguel L. Garcia <miguellg88@gmail.com>",
   "scripts": {
     "start": "node src/server.ts",
     "dev": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
