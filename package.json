@@ -5,7 +5,7 @@
   "license": "MIT",
   "author": "Miguel L. Garcia <miguellg88@gmail.com>",
   "scripts": {
-    "start": "node src/server.ts",
+    "start": "node src/server.js",
     "dev": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
     "knex:seed": "knex --knexfile knexfile.ts seed:run"
