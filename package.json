@@ -1,8 +1,9 @@
 {
-  "name": "server",
+  "name": "server-app-cursomg",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server.js",
   "license": "MIT",
+  "autor": "Miguel L. Garcia <miguelg_sl@hotmail.com>",
   "scripts": {
     "start": "node src/server.ts",
     "dev": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
