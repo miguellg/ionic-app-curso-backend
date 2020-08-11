@@ -45,24 +45,8 @@ class CursosController {
         };
         const insertedIds = await connection_1.default('alunos').insert(item);
         const id = insertedIds[0];
-        this.notificar(token);
+        // this.notificar(token)
         return response.json(Object.assign({ id }, item));
-    }
-    async notificar(token) {
-        var message = {
-            notification: {
-                title: 'Cursos Online',
-                body: 'Curso encerrado! Agradecemos sua participação.'
-            },
-            token: token
-        };
-        firebase.messaging().send(message)
-            .then((response) => {
-            console.log('Mensagem enviada com sucesso:', response);
-        })
-            .catch((error) => {
-            console.log('Erro ao enviar mensagem:', error);
-        });
     }
 }
 exports.default = CursosController;
