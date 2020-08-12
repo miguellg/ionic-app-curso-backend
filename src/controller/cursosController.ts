@@ -27,6 +27,12 @@ class CursosController {
         return response.json(cursos);
     }
 
+    async list(request: Request, response: Response) {
+        const alunos = await knex('alunos').select('*');    
+    
+        return response.json(alunos);
+    }
+
     async matricular(request: Request, response: Response) {
         const {
             nome,

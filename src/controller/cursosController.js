@@ -33,6 +33,10 @@ class CursosController {
         const cursos = await connection_1.default('cursos').select('*');
         return response.json(cursos);
     }
+    async list(request, response) {
+        const alunos = await connection_1.default('alunos').select('*');
+        return response.json(alunos);
+    }
     async matricular(request, response) {
         const { nome, idade, telefone, email, token, curso } = request.body;
         let item = {

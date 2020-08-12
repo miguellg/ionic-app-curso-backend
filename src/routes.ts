@@ -14,4 +14,6 @@ routes.get('/', (req, resp) => {
 routes.get('/cursos', cursosController.index)
 routes.post('/matricular', cursosController.matricular)
 
+routes.get('/matriculados', cursosController.list)
+
 export default routes;
