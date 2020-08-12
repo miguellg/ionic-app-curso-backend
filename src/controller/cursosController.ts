@@ -57,7 +57,21 @@ class CursosController {
     
         const id = insertedIds[0];           
     
-        this.notificar(token)
+        var message = {        
+            notification: {
+                title: 'Cursos Online',
+                body: 'Curso encerrado! Agradecemos sua participação.'
+              },
+            token: token
+        };
+    
+        firebase.messaging().send(message)
+        .then((response) => {
+            console.log('Mensagem enviada com sucesso:', response);
+        })
+        .catch((error) => {
+            console.log('Erro ao enviar mensagem:', error);
+        });
 
         return response.json({
             id,
