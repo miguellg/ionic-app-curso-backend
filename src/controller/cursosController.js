@@ -70,10 +70,10 @@ class CursosController {
             authProviderX509CertUrl: serviceAccount.auth_provider_x509_cert_url,
             clientC509CertUrl: serviceAccount.client_x509_cert_url
         };
-        firebase.initializeApp({
+        let messaging = firebase.initializeApp({
             credential: firebase.credential.cert(params),
-        });
-        firebase.messaging().send(message)
+        }).messaging();
+        messaging.send(message)
             .then((response) => {
             console.log('Mensagem enviada com sucesso:', response);
         })
